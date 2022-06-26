@@ -1,9 +1,8 @@
-export default function Story(story) {
-  console.log(story);
+export default function Story (story) {
   return `
     <div class="story">
       <div> 
-        <span class="gray">${story.index}</span>
+        <span class="gray">${story.index || ''}</span>
         <span class="upvote">▲</span>
         <a href="${story.url}">${story.title}</a>
         <span>(${story.domain})</span>
@@ -15,13 +14,13 @@ export default function Story(story) {
           <a href="#/item?id=${story.id}">
             ${story.comments_count} comments
           </a>
-          |
+          <!--|
           <span class="favorite">
             <img class="heart" src="https://icon.now.sh/heart/ccc">f
             Add To Favorites
-          </span>
+          </span>-->
         </div>
       </div>
     </div>
-  `;  
+  `
 }

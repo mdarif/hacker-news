@@ -1,9 +1,14 @@
 import RouterHandler from './router.js'
+import setActiveLink from './utils/activeLink.js'
 
-class App {
-  constructor() {
-    new RouterHandler();
-  }  
+window.onhashchange = () => {
+  setActiveLink()
 }
 
-new App();
+class App {
+  constructor () {
+    new RouterHandler()
+  }
+}
+
+new App()
